@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .options {
+            display: flex;
+            gap: 15px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>COVID-19 Symptom Checker</h1>
+    <form method="POST">
+        <div class="question">
+            <label for="breathing_problem">Do you have breathing problems?</label>
+            <div class="options">
+                <label><input type="radio" id="breathing_problem_yes" name="breathing_problem" value="1" required> Yes</label>
+                <label><input type="radio" id="breathing_problem_no" name="breathing_problem" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="fever">Do you have fever?</label>
+            <div class="options">
+                <label><input type="radio" id="fever_yes" name="fever" value="1" required> Yes</label>
+                <label><input type="radio" id="fever_no" name="fever" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="dry_cough">Do you have dry cough?</label>
+            <div class="options">
+                <label><input type="radio" id="dry_cough_yes" name="dry_cough" value="1" required> Yes</label>
+                <label><input type="radio" id="dry_cough_no" name="dry_cough" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="sore_throat">Do you have sore throat?</label>
+            <div class="options">
+                <label><input type="radio" id="sore_throat_yes" name="sore_throat" value="1" required> Yes</label>
+                <label><input type="radio" id="sore_throat_no" name="sore_throat" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="abroad_travel">Have you traveled abroad recently?</label>
+            <div class="options">
+                <label><input type="radio" id="abroad_travel_yes" name="abroad_travel" value="1" required> Yes</label>
+                <label><input type="radio" id="abroad_travel_no" name="abroad_travel" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="contact_with_covid">Have you had contact with a COVID-19 patient?</label>
+            <div class="options">
+                <label><input type="radio" id="contact_with_covid_yes" name="contact_with_covid" value="1" required> Yes</label>
+                <label><input type="radio" id="contact_with_covid_no" name="contact_with_covid" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="attended_large_gathering">Have you attended a large gathering recently?</label>
+            <div class="options">
+                <label><input type="radio" id="attended_large_gathering_yes" name="attended_large_gathering" value="1" required> Yes</label>
+                <label><input type="radio" id="attended_large_gathering_no" name="attended_large_gathering" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="visited_public_exposed_places">Have you visited public exposed places?</label>
+            <div class="options">
+                <label><input type="radio" id="visited_public_exposed_places_yes" name="visited_public_exposed_places" value="1" required> Yes</label>
+                <label><input type="radio" id="visited_public_exposed_places_no" name="visited_public_exposed_places" value="0" required> No</label>
+            </div>
+        </div>
+        <div class="question">
+            <label for="family_working_in_public_exposed_places">Does your family work in public exposed places?</label>
+            <div class="options">
+                <label><input type="radio" id="family_working_in_public_exposed_places_yes" name="family_working_in_public_exposed_places" value="1" required> Yes</label>
+                <label><input type="radio" id="family_working_in_public_exposed_places_no" name="family_working_in_public_exposed_places" value="0" required> No</label>
+            </div>
+        </div>
+        <input type="submit" value="Check">
+    </form>
+</body>
+</html>

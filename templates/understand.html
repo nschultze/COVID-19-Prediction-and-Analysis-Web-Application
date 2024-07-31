@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understand the Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding the COVID-19 Prediction Model</h1>
+    
+    <div class="section">
+        <h2>Basic Statistics</h2>
+        {{ basic_stats|safe }}
+    </div>
+    
+    <div class="section">
+        <h2>Correlation Heatmap</h2>
+        <img src="{{ url_for('static', filename='correlation_heatmap.png') }}" alt="Correlation Heatmap">
+    </div>
+    
+    <div class="section">
+        <h2>Distribution of COVID-19 Cases</h2>
+        <img src="{{ url_for('static', filename='covid_distribution.png') }}" alt="COVID-19 Distribution">
+    </div>
+    
+    <div class="section">
+        <h2>Feature Importance</h2>
+        <img src="{{ url_for('static', filename='feature_importance.png') }}" alt="Feature Importance">
+    </div>
+    
+    <a href="/" class="back-link">Back to Symptom Checker</a>
+</body>
+</html>
